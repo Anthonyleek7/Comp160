@@ -1,0 +1,9 @@
+package GroupProject;
+
+public class App {
+
+	public static void main(String[] args) {
+		//use Class runGame to run the game and such
+	}
+
+}
