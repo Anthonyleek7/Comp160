@@ -3,11 +3,14 @@ package GroupProject;
 import java.util.Scanner;
 
 public class runGame {
-
-	public static void main(String[] args) {
-		Scanner kbdIn = new Scanner (System.in);
-		while (true)	{
-			/* 
+	/*
+	
+	
+	Scanner kbdIn = new Scanner (System.in);
+	while (true)	{
+	
+	
+			
       upload the getTextFile Class to use the game
       
       use a switch to choose whether it will be faught alone, groups of 2, groups of 3, or fleeing
