@@ -1,12 +1,22 @@
-package test;
+package GroupProject;
 
 
 
 import java.util.Scanner;
 
-public class app {
+public class runGame {
+	
+	
+	private static void randomFriend() {
+	}
+	private static void randomFoe() {
+	}
+	private static void randomWeapon() {
+	}	
 
-	public static void main(String[] args) {
+
+
+{
 			
 		
 		Scanner kbdIN = new Scanner( System.in );
@@ -16,50 +26,47 @@ public class app {
 			
 			System.out.println( "Options" );
 			System.out.println();
-			System.out.println( " 1. Test randomly creating a friend ");
-			System.out.println( " 2. Test reading a troupe from a file ");
-			System.out.println( " 3. End program ");
+			System.out.println( " 1.               Fight alone!" );
+			System.out.println( " 2.   Fight in a group of two!" );
+			System.out.println( " 3. Fight in a group of three!" );
 			System.out.println();
 			System.out.println( "Choose an option: ");
 			
 			int option = kbdIN.nextInt();
-			System.out.println( "Choose Weapon");
-			int weapon = kbdIN.nextInt();
-			
-			
+			System.out.println( "Decide how your fight will go down!");
+			int style = kbdIN.nextInt();
+			int weapon = kbdIN.nextInt();			
 			
 			switch( option ) {
 			case 1:
-				TestRandomFriend();
-				System.out.println( "Your weapon will be a: ");
-				switch ( weapon ) {
-					case 1: 
-						System.out.println( "Sword");
+				System.out.println( "You have chosen to fight alone.");
+				System.out.println( "user input or random" );
+				switch ( style ) {
+					case 1: //pick your own weapon
+						System.out.println( "Choose your weapon" );
 						break;
-					case 2: 
-						System.out.println( "Knife");
+					default: //computer picks random weapon
+						randomWeapon();
 						break;
-					case 3:
-						System.out.println( "Baseball Bat");
-						break;
+					
 					}
 					
 					break;
 			case 2:
-				System.out.println( "Larry will be fighting with you now" );
-				System.out.println( "Your weapon will be a: ");
-				switch ( weapon ) {
-				case 1: 
-					System.out.println( "Sword");
+				System.out.println( "You have chosen to fight in a group of two" );
+				System.out.println( "Now choose how your team will be assembled" );
+				System.out.println();
+				System.out.println( "1. by choice" );
+				System.out.println( "2. by random" );
+				switch ( style ) {
+				case 1:
+					System.out.println( "Choose one friend to fight with");
 					break;
-				case 2: 
-					System.out.println( "Knife");
+				case 2:
+					randomFriend();
 					break;
-				case 3:
-					System.out.println( "Baseball Bat");
-					break;
+				
 				}
-					break;
 			case 3:
 				System.out.println( "Brad will be fighting with you now"  );
 					return;
@@ -69,13 +76,11 @@ public class app {
 
 	}
 
+		
 	
-	private static void TestRandomFriend() {
-		System.out.println( "James will be fighting with you" );
 	
-	}
 
 	
 }
-
-
+	
+}
