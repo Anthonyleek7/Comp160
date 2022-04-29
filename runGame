@@ -58,7 +58,7 @@ public class runGame {
               
               
         Fleeing:(4)"default"
-          System.out.println ("Don't be a b**** stay and fight"
+          System.out.println ("Don't be a b**** stay and fight");
           
       
       
