@@ -1,8 +1,72 @@
 package GroupProject;
 
+import java.util.Scanner;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
 public class getTextFile {
 	/*
 	 * Pull every item using an array 
 	 * 
 	 */
+	 
+	Scanner fileIn = null ; // initializes fileIn to empty
+	try
+	{
+	 // Attempt to open the file
+	 fileIn = new Scanner( new FileInputStream("Friends.txt"));
+	}
+	catch (FileNotFoundException e)
+	{
+	
+	// If the file could not be found, this code is executed
+	 // and then the program exits
+	 System.out.println("File not found.  Friends");
+	 System.exit(0);
+	}
+	
+	Scanner fileIn = null ; // initializes fileIn to empty
+	try
+	{
+	 // Attempt to open the file
+	 fileIn = new Scanner( new FileInputStream("Friends Weapons.txt"));
+	}
+	catch (FileNotFoundException e)
+	{
+	
+	// If the file could not be found, this code is executed
+	 // and then the program exits
+	 System.out.println("File not found.  Friends Weapons");
+	 System.exit(0);
+	}
+	
+	Scanner fileIn = null ; // initializes fileIn to empty
+	try
+	{
+	 // Attempt to open the file
+	 fileIn = new Scanner( new FileInputStream("Foes.txt"));
+	}
+	catch (FileNotFoundException e)
+	{
+	
+	// If the file could not be found, this code is executed
+	 // and then the program exits
+	 System.out.println("File not found.  Foes");
+	 System.exit(0);
+	}
+	
+	Scanner fileIn = null ; // initializes fileIn to empty
+	try
+	{
+	 // Attempt to open the file
+	 fileIn = new Scanner( new FileInputStream("Foes Weapons.txt"));
+	}
+	catch (FileNotFoundException e)
+	{
+	
+	// If the file could not be found, this code is executed
+	 // and then the program exits
+	 System.out.println("File not found.  Foes Weapons");
+	 System.exit(0);
+	}
 }
