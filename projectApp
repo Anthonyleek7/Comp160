@@ -36,8 +36,7 @@ public void playGame() {
 			System.out.println( " 2.   Random!" );
 			System.out.println();
 			int style = kbdIN.nextInt();
-			System.out.println( "Choose your weapon: ");
-			int weapon = kbdIN.nextInt();			
+						
 			
 			switch( option ) {
 			case 1:
@@ -46,7 +45,8 @@ public void playGame() {
 					case 1: //pick your own weapon
 						System.out.println("You have chosen to input your own values");
 						System.out.println();
-						System.out.println( "Choose your weapon" );
+						System.out.println( "Choose your weapon: ");
+						int weapon = kbdIN.nextInt();
 						break;
 					default: //computer picks random weapon
 						randomWeapon();
