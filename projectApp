@@ -1,10 +1,7 @@
 package GroupProject;
-
-
-
 import java.util.Scanner;
 
-public class runGame {
+public class projectApp {
 	
 	
 	private static void randomFriend() {
@@ -15,34 +12,40 @@ public class runGame {
 	}	
 
 
+public void playGame() {
 
-{
 			
-		
 		Scanner kbdIN = new Scanner( System.in );
 				
 		
 		while( true ) {
 			
+			System.out.println( "Decide how your fight will go down!");
 			System.out.println( "Options" );
 			System.out.println();
 			System.out.println( " 1.               Fight alone!" );
 			System.out.println( " 2.   Fight in a group of two!" );
 			System.out.println( " 3. Fight in a group of three!" );
+			System.out.println( " 4.                      Flee!");
 			System.out.println();
 			System.out.println( "Choose an option: ");
-			
 			int option = kbdIN.nextInt();
-			System.out.println( "Decide how your fight will go down!");
+			System.out.println( "Choose your style: ");
+			System.out.println();
+			System.out.println( " 1.   User Input!" );
+			System.out.println( " 2.   Random!" );
+			System.out.println();
 			int style = kbdIN.nextInt();
+			System.out.println( "Choose your weapon: ");
 			int weapon = kbdIN.nextInt();			
 			
 			switch( option ) {
 			case 1:
 				System.out.println( "You have chosen to fight alone.");
-				System.out.println( "user input or random" );
 				switch ( style ) {
 					case 1: //pick your own weapon
+						System.out.println("You have chosen to input your own values");
+						System.out.println();
 						System.out.println( "Choose your weapon" );
 						break;
 					default: //computer picks random weapon
@@ -57,19 +60,26 @@ public class runGame {
 				System.out.println( "Now choose how your team will be assembled" );
 				System.out.println();
 				System.out.println( "1. by choice" );
+				int choice = kbdIN.nextInt();
 				System.out.println( "2. by random" );
+				int random = kbdIN.nextInt();
 				switch ( style ) {
-				case 1:
-					System.out.println( "Choose one friend to fight with");
-					break;
-				case 2:
-					randomFriend();
-					break;
+					case 1:
+						System.out.println( "Choose one friend to fight with");
+						break;
+					case 2:
+						randomFriend();
+						break;
 				
 				}
 			case 3:
 				System.out.println( "Brad will be fighting with you now"  );
 					return;
+			
+			default: {
+				System.out.println ("Don't be a b**** stay and fight");
+			}
+					
 			}
 		
 		}
@@ -80,7 +90,5 @@ public class runGame {
 	
 	
 
-	
-}
 	
 }
