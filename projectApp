@@ -2,15 +2,6 @@ package GroupProject;
 import java.util.Scanner;
 
 public class projectApp {
-	
-	
-	private static void randomFriend() {
-	}
-	private static void randomFoe() {
-	}
-	private static void randomWeapon() {
-	}	
-
 
 public void playGame() {
 
@@ -34,6 +25,7 @@ public void playGame() {
 			switch( option ) {
 			case 1:
 				System.out.println( "You have chosen to fight alone.");
+				System.out.println();
 				System.out.println( "Choose your style: ");
 				System.out.println();
 				System.out.println( " 1.   User Input!" );
@@ -47,8 +39,8 @@ public void playGame() {
 						System.out.println( "Choose your weapon: ");
 						int weapon = kbdIN.nextInt(); // pulls files from friends weapons for you to pick
 						break;
-					default: //computer picks random weapon
-						randomWeapon();
+					default: 
+						//computer picks random weapon and random foe to fight
 						break;
 					
 					}
@@ -64,13 +56,20 @@ public void playGame() {
 //				int random = kbdIN.nextInt();
 				switch ( choice ) {
 					case 1:
-						System.out.println( "Choose one friend to fight with"); // pulls from friends file
+						System.out.println( "Choose one friend to fight with" ); 
+						for( int i = 0; i<2; i++) {
+//							pulls from friends class, then weapons class after it
+							i++;
+						}
 						break;
 					case 2:
-						randomFriend(); // picks random friend
+						System.out.println("You have chosen a random friend");
+						System.out.println();
+						// pulls one random friend and two foes to fight
 						break;
 				
 				}
+						
 			case 3:
 				System.out.println( "You have chosen to fight in a group of three" );
 				System.out.println( "Now choose how your team will be assembled");
@@ -84,7 +83,9 @@ public void playGame() {
 					System.out.println("Choose two friends to fight with"); // will show friends from the text files to choose from
 					break;
 				case 2:
-					randomFriend(); // pulls two random friends
+					System.out.println("You have chosen two random friends");
+					System.out.println();
+					// pulls two random friends and three foes to fight
 					return;
 				}
 			default: {
