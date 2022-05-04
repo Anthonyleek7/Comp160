@@ -5,9 +5,10 @@ public class App {
 	public static void main(String[] args) {
 		//use Class runGame to run the game and such
 		
-		runGame r1 = new runGame();
+		projectApp p1 = new projectApp();
+	
 		
-		r1.runGame();
+		p1.playGame();
 		
 	}
 
