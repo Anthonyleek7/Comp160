@@ -1,0 +1,30 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class Weapons {
+
+	
+		private void getFoe()	{ 
+			
+		Scanner fileIn = null; // initializes fileIn to empty tray
+		fileIn = null ; // initializes fileIn to empty
+		try
+		{
+			// Attempt to open the file
+			fileIn = new Scanner( new FileInputStream("Foes.txt"));
+		}
+		catch (FileNotFoundException e)
+		{
+	
+			// If the file could not be found, this code is executed
+			// and then the program exits
+			System.out.println("File not found.  Foes");
+			System.exit(0);
+		}
+	
+		int numberOfFoes;
+		
+		
+		
+		
