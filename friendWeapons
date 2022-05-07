@@ -1,0 +1,69 @@
+package GroupProject;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+
+
+public class friendWeapons {
+	double health = 100.0;
+	int [][] FriendWeapons;
+	private Integer name;
+	private int Damage;
+	private int weaponEfficiency;
+	private int numberOfFriendWeapons;
+	private int weapon;
+	
+	public friendWeapons()	{
+		Scanner fileIn = null; // initializes fileIn to empty
+		try
+		{
+			// Attempt to open the file
+			fileIn = new Scanner( new FileInputStream("Friends Weapons"));
+		}
+		catch (FileNotFoundException e)
+		{
+	
+			// If the file could not be found, this code is executed
+			// and then the program exits
+			System.out.println("File not found.  Friends Weapons");
+			System.exit(0);
+		}
+		
+		this.numberOfFriendWeapons = fileIn.nextInt();
+		fileIn.nextLine();
+		
+		FriendWeapons = new int [this.numberOfFriendWeapons][2];
+		for (int i = 0; i < this.numberOfFriendWeapons;i++) {	
+			this.name = fileIn.next();
+
+			this.Damage = fileIn.nextInt();
+			this.weaponEfficiency = fileIn.nextInt();
+
+			weapon = this.Damage * this.weaponEfficiency;
+			this.name = Integer.(i);
+			FriendWeapons [i][0] = (i + 1);
+			FriendWeapons [i][1] = this.weapon;
+		}
+		
+	}
+	
+	public void displayFriendWeapons()	{
+		System.out.println("FriendWeapons Table!!");
+		System.out.println("*******************");
+		System.out.println("        Name   Type ");
+		System.out.println("-------------------");
+		for (int i = 0; i < this.numberOfFriendWeapons;i++)	{
+			
+			System.out.print("row "+ (i+1) + " | ");
+			for (int c = 0; c < 2; c++)	{
+				System.out.print (this.FriendWeapons[i][c] + " ");
+			}
+			System.out.println();			
+		}
+		System.out.println("*******************");
+		System.out.println();
+
+	}
+}
