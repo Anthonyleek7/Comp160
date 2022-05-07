@@ -3,8 +3,16 @@ package GroupProject;
 public class App {
 
 	public static void main(String[] args) {
-		//use Class runGame to run the game and such
 		
+//		generates the class of Foe and displays from text files
+		Foe fo1 = new Foe();
+		fo1.displayFoes();
+		
+//		generates the class of Friends and displays from text files
+		friends f1 = new friends();
+		f1.displayFriends();
+		
+		//use Class runGame to run the game and such
 		projectApp p1 = new projectApp();
 	
 		
