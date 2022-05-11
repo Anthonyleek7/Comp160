@@ -1,0 +1,22 @@
+package GroupProject;
+
+
+public class TestApp {
+
+	public static void main(String[] args) {
+		
+		Foe fo1 = new Foe();
+		fo1.displayFoes();
+		
+		
+		friends f1 = new friends();
+		f1.displayFriends();
+		
+		friendWeapons fw1 = new friendWeapons();
+		fw1.displayFriendWeapons();
+		
+		foeWeapons fow1 = new foeWeapons();
+		fow1.displayFoeWeapons();
+	
+	}
+}
