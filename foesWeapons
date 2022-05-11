@@ -13,7 +13,7 @@ public class foeWeapons {
 	private String name;
 	private int Damage;
 	private double weaponEfficiency;
-	private int numberOfFoeWeapons;
+	public int numberOfFoeWeapons;
 	private double weapon;
 	
 	public foeWeapons()	{
