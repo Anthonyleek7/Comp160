@@ -27,6 +27,17 @@ public class TestApp {
 		
 //		pullGang pg1 = new pullGang();
 //		pg1.displayGang();
+
+
+		getFriend f2 = new getFriend();
+		f2.displayGetFriend();
+		
+		getTroupe2 f3 = new getTroupe2();
+		f3.displayGetTroupe2();
+		
+		getTroupe3 f5 = new getTroupe3();
+		f5.displayGetTroupe3();
+	}
 	}
 }
 
