@@ -1,0 +1,68 @@
+package GroupProject;
+
+import java.util.Random;
+
+public class pullGang {
+	
+	public String name1;
+	public String type1;
+	public double health1;
+	public double damage1;
+	public String weaponName1;
+	
+	public String name2;
+	public String type2;
+	public double health2;
+	public double damage2;
+	public String weaponName2;
+	
+	public pullGang() {
+	
+	Random rand = new Random();
+
+	Foe f1 = new Foe();
+
+	name1 = f1.Foe[1];
+	
+	type1 = f1.FoeType[1];
+	
+	health1 = f1.FoeHealth[1];
+	
+	name2 = f1.Foe[0];
+	
+	type2 = f1.FoeType[0];
+	
+	health2 = f1.FoeHealth[0];
+	
+	foeWeapons fw1 = new foeWeapons();
+	
+	int j = rand.nextInt(fw1.numberOfFoeWeapons - 1);
+	
+	damage1 = fw1.FoeWeaponDamage[j];
+	
+	weaponName1 = fw1.FoeWeaponName[j];
+	
+	int k = rand.nextInt(fw1.numberOfFoeWeapons - 1);
+	
+	damage2 = fw1.FoeWeaponDamage[k];
+	
+	weaponName2 = fw1.FoeWeaponName[k];
+	
+	}
+	
+	public void displayGang()	{
+		System.out.printf("Name 1: %5s%n", name1);
+		System.out.printf("Class 1: %5s%n", type1);
+		System.out.printf("Health 1: %5s%n", health1);
+		System.out.printf("Weapon 1: %5s%n", weaponName1);
+		System.out.printf("Weapon Damage 1: %5s%n", damage1);
+		System.out.println();
+		System.out.printf("Name 2: %5s%n", name2);
+		System.out.printf("Class 2: %5s%n", type2);
+		System.out.printf("Health 2: %5s%n", health2);
+		System.out.printf("Weapon 2: %5s%n", weaponName2);
+		System.out.printf("Weapon Damage 2: %5s%n", damage2);
+		
+	}
+	
+}
