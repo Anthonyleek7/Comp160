@@ -1,0 +1,85 @@
+package GroupProject;
+
+import java.util.Scanner;
+
+public class getTroupe3 {
+	public String name;
+	public String type;
+	public double health;
+	public double damage;
+	public String weaponName;
+	public String name2;
+	public String type2;
+	public double health2;
+	public double damage2;
+	public String weaponName2;
+	public String name3;
+	public String type3;
+	public double health3;
+	public double damage3;
+	public String weaponName3;
+
+	
+	public getTroupe3()	{
+		Scanner kbdIn = new Scanner(System.in);
+		
+		friends f1 = new friends();
+		friendWeapons fw1 = new friendWeapons();
+		System.out.print( "Enter your pick for friend 1: ");
+		int i = kbdIn.nextInt() -1;
+		name = f1.Friends[i];
+		type = f1.FriendType[i];	
+		health = f1.FriendHealth[i];
+		
+		System.out.print( "Enter your pick for friend 2: ");
+		int l = kbdIn.nextInt() -1;
+		name2 = f1.Friends[l];
+		type2 = f1.FriendType[l];	
+		health2 = f1.FriendHealth[l];
+		
+		System.out.print( "Enter your pick for friend 3: ");
+		int o = kbdIn.nextInt() -1;
+		name3 = f1.Friends[o];
+		type3 = f1.FriendType[o];	
+		health3 = f1.FriendHealth[o];
+	
+		
+		System.out.print( "Enter your pick for friend 1's weapon: ");
+		int j = kbdIn.nextInt() -1;
+
+		damage = fw1.FriendWeaponDamage[j];
+		
+		weaponName = fw1.FriendWeaponName[j];
+		System.out.print( "Enter your pick for friend 2's weapon: ");
+		int k = kbdIn.nextInt() -1;
+
+		damage2 = fw1.FriendWeaponDamage[k];
+		
+		weaponName2 = fw1.FriendWeaponName[k];
+		System.out.print( "Enter your pick for friend 3's weapon: ");
+		int g = kbdIn.nextInt() -1;
+
+		damage2 = fw1.FriendWeaponDamage[g];
+		
+		weaponName2 = fw1.FriendWeaponName[g];
+	}
+	
+	public void displayGetTroupe3()	{
+		System.out.printf("Name 1: %5s%n", name);
+		System.out.printf("Class 1: %5s%n", type);
+		System.out.printf("Health 1: %5s%n", health);
+		System.out.printf("Weapon 1: %5s%n", weaponName);
+		System.out.printf("Weapon Damage 1: %5s%n", damage);
+		System.out.printf("Name 2: %5s%n", name2);
+		System.out.printf("Class 2: %5s%n", type2);
+		System.out.printf("Health 2: %5s%n", health2);
+		System.out.printf("Weapon 2: %5s%n", weaponName2);
+		System.out.printf("Weapon Damage 2: %5s%n", damage2);
+		System.out.printf("Name 3: %5s%n", name3);
+		System.out.printf("Class 3: %5s%n", type3);
+		System.out.printf("Health 3: %5s%n", health3);
+		System.out.printf("Weapon 3: %5s%n", weaponName3);
+		System.out.printf("Weapon Damage 3: %5s%n", damage3);
+	}
+		
+}
