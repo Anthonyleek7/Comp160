@@ -8,10 +8,12 @@ import java.util.Scanner;
 
 public class friends {
 	double health = 100.0;
-	String [][] Friends;
+	String [] Friends;
+	String [] FriendType;
+	double [] FriendHealth;
 	private String name;
 	private String type;
-	private int numberOfFriends;
+	public int numberOfFriends;
 	
 	public friends()	{
 		Scanner fileIn = null; // initializes fileIn to empty
@@ -32,32 +34,39 @@ public class friends {
 		this.numberOfFriends = fileIn.nextInt();
 		fileIn.nextLine();
 		
-		Friends = new String [this.numberOfFriends][2];
+		Friends = new String [this.numberOfFriends];
+		FriendType = new String [this.numberOfFriends];
+		FriendHealth = new double [this.numberOfFriends];
+		
 		for (int i = 0; i < this.numberOfFriends;i++) {	
 			this.name = fileIn.nextLine();
 
 			this.type = fileIn.nextLine();
 
-			Friends [i][0] = this.name;
-			Friends [i][1] = this.type;
+			Friends [i] = this.name;
+			FriendType [i] = this.type;
+			FriendHealth [i] = this.health;
+			
 		}
 		
 	}
 	
+	
+	
 	public void displayFriends()	{
 		System.out.println("Friends Table!!");
-		System.out.println("*******************");
-		System.out.printf (" %13s  %7s %n ","name","type");
-		System.out.println("-------------------");
+		System.out.println("**********************************");
+		System.out.printf (" %13s  %5s %9s %n ","name","type", "Health");
+		System.out.println("----------------------------------");
 		for (int i = 0; i < this.numberOfFriends;i++)	{
 			
 			System.out.print("row "+ (i+1) + " | ");
-			for (int c = 0; c < 2; c++)	{
-				System.out.printf ("%7s ", this.Friends[i][c]);
-			}
+			
+			System.out.printf ("%7s %7s %7s", this.Friends[i], this.FriendType[i], this.FriendHealth[i]);
+			
 			System.out.println();			
 		}
-		System.out.println("*******************");
+		System.out.println("**********************************");
 		System.out.println();
 
 	}
