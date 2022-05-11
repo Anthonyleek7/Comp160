@@ -2,12 +2,45 @@ package GroupProject;
 
 import java.util.Random;
 
-public class randomFriend  {
+public class randomFriend {
+	
+	String name;
+	String type;
+	double health;
+	double damage;
+	String weaponName;
+	
+	public randomFriend() {
 	
 	Random rand = new Random();
 
 	friends f1 = new friends();
 	
-	int i = rand.nextInt(f1.numberOfFriends) + 1;
-
+	int i = rand.nextInt(f1.numberOfFriends - 1);
+	
+	name = f1.Friends[i];
+	
+	type = f1.FriendType[i];
+	
+	health = f1.FriendHealth[i];
+	
+	friendWeapons fw1 = new friendWeapons();
+	
+	int j = rand.nextInt(fw1.numberOfFriendWeapons - 1);
+	
+	damage = fw1.FriendWeaponDamage[j];
+	
+	weaponName = fw1.FriendWeaponName[j];
+	
+	}
+	
+	public void displayRandomFriend()	{
+		System.out.printf("Name: %5s%n", name);
+		System.out.printf("Class: %5s%n", type);
+		System.out.printf("Health: %5s%n", health);
+		System.out.printf("Weapon: %5s%n", weaponName);
+		System.out.printf("Weapon Damage: %5s%n", damage);
+		
+	}
+	
 }
