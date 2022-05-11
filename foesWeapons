@@ -1,1 +1,75 @@
-t
+package GroupProject;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+
+
+public class foeWeapons {
+	double health = 100.0;
+	double [] FoeWeaponDamage;
+	String [] FoeWeaponName;
+	private String name;
+	private int Damage;
+	private double weaponEfficiency;
+	private int numberOfFoeWeapons;
+	private double weapon;
+	
+	public foeWeapons()	{
+		Scanner fileIn = null; // initializes fileIn to empty
+		try
+		{
+			// Attempt to open the file
+			fileIn = new Scanner( new FileInputStream("Foes Weapons"));
+		}
+		catch (FileNotFoundException e)
+		{
+	
+			// If the file could not be found, this code is executed
+			// and then the program exits
+			System.out.println("File not found.  Foe Weapons");
+			System.exit(0);
+		}
+		
+		this.numberOfFoeWeapons = fileIn.nextInt();
+		fileIn.nextLine();
+		
+		FoeWeaponName = new String [this.numberOfFoeWeapons];
+		FoeWeaponDamage = new double [this.numberOfFoeWeapons];
+		for (int i = 0; i < this.numberOfFoeWeapons;i++) {	
+			this.name = fileIn.nextLine();
+
+			this.Damage = fileIn.nextInt();
+			fileIn.nextLine();
+
+			this.weaponEfficiency = fileIn.nextDouble();
+			fileIn.nextLine();
+
+			this.weapon = this.Damage * this.weaponEfficiency;
+			FoeWeaponDamage [i] = this.weapon;
+			
+			FoeWeaponName [i] = this.name;
+		}
+		
+	}
+	
+	public void displayFoeWeapons()	{
+		System.out.println("FoeWeapons Table!!");
+		System.out.println("*******************");
+		System.out.printf ("%20s %13s %n", "Name","Damage");
+		System.out.println("-------------------");
+		for (int i = 0; i < this.numberOfFoeWeapons;i++)	{
+			
+			System.out.print("row "+ (i+1) + " | ");
+			
+			System.out.printf ("%15s   ", this.FoeWeaponName [i]);
+			System.out.printf ("%5s ", this.FoeWeaponDamage[i]);
+				
+			System.out.println();			
+		}
+		System.out.println("*******************");
+		System.out.println();
+
+	}
+}
