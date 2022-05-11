@@ -2,9 +2,12 @@ package GroupProject;
 
 import java.util.Random;
 
-public class randomFriend {
+public class randomFriend  {
 	
 	Random rand = new Random();
-	
-}
 
+	friends f1 = new friends();
+	
+	int i = rand.nextInt(f1.numberOfFriends) + 1;
+
+}
