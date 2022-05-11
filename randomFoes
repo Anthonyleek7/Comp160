@@ -1,5 +1,9 @@
 package GroupProject;
 
+import java.util.Random;
+
 public class randomFoes {
 
+	Random rand = new Random();
+	
 }
