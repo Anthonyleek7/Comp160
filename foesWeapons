@@ -56,9 +56,9 @@ public class foeWeapons {
 	
 	public void displayFoeWeapons()	{
 		System.out.println("FoeWeapons Table!!");
-		System.out.println("*******************");
+		System.out.println("*******************************");
 		System.out.printf ("%20s %13s %n", "Name","Damage");
-		System.out.println("-------------------");
+		System.out.println("-------------------------------");
 		for (int i = 0; i < this.numberOfFoeWeapons;i++)	{
 			
 			System.out.print("row "+ (i+1) + " | ");
@@ -68,7 +68,7 @@ public class foeWeapons {
 				
 			System.out.println();			
 		}
-		System.out.println("*******************");
+		System.out.println("******************************");
 		System.out.println();
 
 	}
