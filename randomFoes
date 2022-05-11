@@ -6,4 +6,9 @@ public class randomFoes {
 
 	Random rand = new Random();
 	
+	Foes f1 = new Foes();
+	
+	int i = rand.nextInt(f1.numberOfFoes) + 1;
+	
 }
+
