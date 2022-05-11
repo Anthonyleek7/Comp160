@@ -54,7 +54,7 @@ public class Foe {
 			
 			System.out.print("row "+ (i+1) + " | ");
 			for (int c = 0; c < 2; c++)	{
-				System.out.print (this.Foe[i][c] + " ");
+				System.out.printf ("%5s ", this.Foe[i][c]);
 			}
 			System.out.println();
 		}
@@ -62,5 +62,7 @@ public class Foe {
 		System.out.println();
 
 	}
+	
+	
 	
 }
