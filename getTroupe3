@@ -27,18 +27,30 @@ public class getTroupe3 {
 		friendWeapons fw1 = new friendWeapons();
 		System.out.print( "Enter your pick for friend 1: ");
 		int i = kbdIn.nextInt() -1;
+		if ((i < 1) ||( i > f1.numberOfFriends)) {
+			System.out.println( "Please enter a valid input!" );
+			return;
+		}
 		name = f1.Friends[i];
 		type = f1.FriendType[i];	
 		health = f1.FriendHealth[i];
 		
 		System.out.print( "Enter your pick for friend 2: ");
 		int l = kbdIn.nextInt() -1;
+		if ((l < 1) ||( l > f1.numberOfFriends)) {
+			System.out.println( "Please enter a valid input!" );
+			return;
+		}
 		name2 = f1.Friends[l];
 		type2 = f1.FriendType[l];	
 		health2 = f1.FriendHealth[l];
 		
 		System.out.print( "Enter your pick for friend 3: ");
 		int o = kbdIn.nextInt() -1;
+		if ((o < 1) ||(  o> f1.numberOfFriends)) {
+			System.out.println( "Please enter a valid input!" );
+			return;
+		}
 		name3 = f1.Friends[o];
 		type3 = f1.FriendType[o];	
 		health3 = f1.FriendHealth[o];
@@ -46,18 +58,30 @@ public class getTroupe3 {
 		
 		System.out.print( "Enter your pick for friend 1's weapon: ");
 		int j = kbdIn.nextInt() -1;
+		if ((j < 1) ||( j > fw1.numberOfFriendWeapons)) {
+			System.out.println( "Please enter a valid input!" );
+			return;
+		}
 
 		damage = fw1.FriendWeaponDamage[j];
 		
 		weaponName = fw1.FriendWeaponName[j];
 		System.out.print( "Enter your pick for friend 2's weapon: ");
 		int k = kbdIn.nextInt() -1;
+		if ((k < 1) ||( k > fw1.numberOfFriendWeapons)) {
+			System.out.println( "Please enter a valid input!" );
+			return;
+		}
 
 		damage2 = fw1.FriendWeaponDamage[k];
 		
 		weaponName2 = fw1.FriendWeaponName[k];
 		System.out.print( "Enter your pick for friend 3's weapon: ");
 		int g = kbdIn.nextInt() -1;
+		if ((g < 1) ||( g > fw1.numberOfFriendWeapons)) {
+			System.out.println( "Please enter a valid input!" );
+			return;
+		}
 
 		damage2 = fw1.FriendWeaponDamage[g];
 		
