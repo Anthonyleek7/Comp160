@@ -8,10 +8,12 @@ import java.util.Scanner;
 
 public class Foe {
 	double health = 100.0;
-	String [][] Foe;
+	String [] Foe;
+	String [] FoeType;
+	double [] FoeHealth;
 	private String name;
 	private String type;
-	private int numberOfFoes;
+	public int numberOfFoes;
 	
 	public Foe()	{
 		Scanner fileIn = null; // initializes fileIn to empty
@@ -32,33 +34,39 @@ public class Foe {
 		this.numberOfFoes = fileIn.nextInt();
 		fileIn.nextLine();
 		
-		Foe = new String [this.numberOfFoes][2];
+		Foe = new String [this.numberOfFoes];
+		FoeType = new String [this.numberOfFoes];
+		FoeHealth = new double [this.numberOfFoes];
+
+		
 		for (int i = 0; i < this.numberOfFoes;i++) {	
 			this.name = fileIn.nextLine();
 
 			this.type = fileIn.nextLine();
 
-			Foe [i][0] = this.name;
-			Foe [i][1] = this.type;
+			Foe [i] = this.name;
+			FoeType [i] = this.type;
+			FoeHealth [i] = this.health;
+
 		}
 		
 	}
 	
 	public void displayFoes()	{
 		System.out.println("Foes Table!!");
-		System.out.println("*******************");
-		System.out.println("        Name   Type ");
-		System.out.println("-------------------");
+		System.out.println("*******************************");
+		System.out.println("        Name   Type     Health");
+		System.out.println("-------------------------------");
 		
 		for (int i = 0; i < this.numberOfFoes;i++)	{
 			
 			System.out.print("row "+ (i+1) + " | ");
-			for (int c = 0; c < 2; c++)	{
-				System.out.printf ("%5s ", this.Foe[i][c]);
-			}
+		
+			System.out.printf ("%5s %5s %7s ", this.Foe[i], this.FoeType[i], this.FoeHealth[i]);
+			
 			System.out.println();
 		}
-		System.out.println("*******************");
+		System.out.println("*******************************");
 		System.out.println();
 
 	}
