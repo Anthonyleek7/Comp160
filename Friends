@@ -47,13 +47,13 @@ public class friends {
 	public void displayFriends()	{
 		System.out.println("Friends Table!!");
 		System.out.println("*******************");
-		System.out.println("        Name   Type ");
+		System.out.printf (" %13s  %7s %n ","name","type");
 		System.out.println("-------------------");
 		for (int i = 0; i < this.numberOfFriends;i++)	{
 			
 			System.out.print("row "+ (i+1) + " | ");
 			for (int c = 0; c < 2; c++)	{
-				System.out.print (this.Friends[i][c] + " ");
+				System.out.printf ("%7s ", this.Friends[i][c]);
 			}
 			System.out.println();			
 		}
