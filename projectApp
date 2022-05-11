@@ -1,4 +1,6 @@
 package GroupProject;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class projectApp {
@@ -7,6 +9,7 @@ public void playGame() {
 
 			
 		Scanner kbdIN = new Scanner( System.in );
+		Friend f1 = new Friend();
 				
 		
 		while( true ) {
@@ -53,12 +56,11 @@ public void playGame() {
 				System.out.println( "1. by choice" );
 				System.out.println( "2. by random" );
 				int choice = kbdIN.nextInt();
-//				int random = kbdIN.nextInt();
 				switch ( choice ) {
 					case 1:
 						System.out.println( "Choose one friend to fight with" ); 
 						for( int i = 0; i<2; i++) {
-//							pulls from friends class, then weapons class after it
+							// pull friends class
 							i++;
 						}
 						break;
@@ -80,7 +82,11 @@ public void playGame() {
 				
 				switch( choice2 ) {
 				case 1:
-					System.out.println("Choose two friends to fight with"); // will show friends from the text files to choose from
+					System.out.println("Choose two friends to fight with");
+					for( int i = 0; i<3; i++) {
+						// pull friends class
+						i++;
+					}
 					break;
 				case 2:
 					System.out.println("You have chosen two random friends");
@@ -106,3 +112,4 @@ public void playGame() {
 
 	
 }
+
