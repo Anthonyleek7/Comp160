@@ -75,7 +75,7 @@ public class fight {
 								break;
 							}
 							
-							rf1.getWeaponDamage();
+						rf1.getWeaponDamage();
 							if (rf1.damage > 0)	{
 								
 								this.foeHealth = this.foeHealth - rf1.damage;
@@ -86,10 +86,9 @@ public class fight {
 								System.out.println("           Foes Health:  " + this.foeHealth);
 								break;
 							}
-													 
-							if (pa1.choice == 1)	{	
+						f3.getWeaponDamage();				 
+							if (f3.damage > 0)	{	
 								
-								f3.getWeaponDamage();
 								f3.getWeaponDamage2();
 
 								this.foeHealth = this.foeHealth - f3.damage - f3.damage2;
@@ -103,9 +102,10 @@ public class fight {
 								System.out.println("           Foes Health:  " + this.foeHealth);
 								break;
 							}
-							if (pa1.choice == 2)	{
+							
+						f4.getWeaponDamage1();
+							if (f4.damage > 0)	{
 								
-								f4.getWeaponDamage1();
 								f4.getWeaponDamage2();
 
 								this.foeHealth = this.foeHealth - f4.damage - f4.damage2;
@@ -121,10 +121,9 @@ public class fight {
 							}
 						
 						
-											
-							if (pa1.choice2 == 1)	{	
+						f5.getWeaponDamage();				
+							if (f5.damage > 0)	{	
 								
-								f5.getWeaponDamage();
 								f5.getWeaponDamage2();
 								f5.getWeaponDamage3();
 
@@ -139,9 +138,11 @@ public class fight {
 								System.out.println("           Foes Health:  " + this.foeHealth);
 								break;
 							}
-							if (pa1.choice2 == 2)	{
+							
+						f6.getWeaponDamage();
+							if (f6.damage > 0)	{
 								
-								f6.getWeaponDamage();
+							
 								f6.getWeaponDamage2();
 								f6.getWeaponDamage3();
 							
