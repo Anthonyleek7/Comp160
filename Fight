@@ -1,5 +1,185 @@
 package GroupProject;
 
-public class Fight {
+import java.util.Scanner;
 
+
+public class fight {
+	private double friendHealth;
+	private double foeHealth;
+	
+	
+	
+	
+	
+	/* Code does not run currently if you change all pa1.style,choice,choice2 to
+	 * true it works great when inputting the specific position
+	 * I have tried for 5 hours now to figure this out I am saying fuck this
+	 * 
+	 */
+	
+	
+	public fight() {
+		projectApp pa1 = new projectApp();
+		pa1.playGame();
+		if ( pa1.option == 1)	{
+			this.friendHealth = 100.0;
+			this.foeHealth = 100.00;
+		}
+		if ( pa1.option == 2)	{
+			this.friendHealth = 200.0;
+			this.foeHealth = 200.00;
+		}
+		if (pa1.option == 3)	{
+			this.friendHealth = 300.0;
+			this.foeHealth = 200.00;
+		}
+	}
+	
+	public void runfight() 	{
+		Scanner kbdIN = new Scanner( System.in );
+		
+		projectApp pa1 = new projectApp();
+		getFriend gf1 = new getFriend();
+		randomFriend rf1 = new randomFriend();
+		randomFoes rfo1 = new randomFoes();
+		pullGang pg1 = new pullGang();
+		getTroupe2 f3 = new getTroupe2();
+		randTroupe2 f4 = new randTroupe2();
+		getTroupe3 f5 = new getTroupe3();
+		randTroupe3 f6 = new randTroupe3();
+
+
+		
+		while ((friendHealth > 0) && (foeHealth > 0))	 {
+			System.out.println();
+			System.out.println( "   Decide your next move!   ");
+			System.out.println( "Options" );
+			System.out.println();
+			System.out.println( " 1.        Continue Fighting!" );
+			System.out.println( " 2.                     Flee!" );
+			System.out.println();
+			System.out.println( "Choose an option: ");
+			int fight = kbdIN.nextInt();
+			
+			switch (fight)	{
+					case 1:
+						if (pa1.option == 1)	{
+							
+							if (pa1.style == 1)	{
+								gf1.getWeaponDamage();
+								this.foeHealth = this.foeHealth - gf1.damage;
+								
+								rfo1.getWeaponDamage();
+								this.friendHealth = this.friendHealth - rfo1.damage;
+							
+								System.out.println("        Friends Health:  " + this.friendHealth);
+								System.out.println("           Foes Health:  " + this.foeHealth);
+								break;
+							}
+							if (pa1.style == 2)	{
+								
+								rf1.getWeaponDamage();
+								this.foeHealth = this.foeHealth - rf1.damage;
+								rfo1.getWeaponDamage();
+								this.friendHealth = this.friendHealth - rfo1.damage;
+							
+								System.out.println("        Friends Health:  " + this.friendHealth);
+								System.out.println("           Foes Health:  " + this.foeHealth);
+								break;
+							}
+						}
+						if (pa1.option == 2)	{
+							 
+							if (pa1.choice == 1)	{	
+								
+								f3.getWeaponDamage();
+								f3.getWeaponDamage2();
+
+								this.foeHealth = this.foeHealth - f3.damage - f3.damage2;
+								
+								pg1.getWeaponDamage1();
+								pg1.getWeaponDamage2();
+
+								this.friendHealth = this.friendHealth - pg1.damage1 - pg1.damage2;
+							
+								System.out.println("        Friends Health:  " + this.friendHealth);
+								System.out.println("           Foes Health:  " + this.foeHealth);
+								break;
+							}
+							if (pa1.choice == 2)	{
+								
+								f4.getWeaponDamage1();
+								f4.getWeaponDamage2();
+
+								this.foeHealth = this.foeHealth - f4.damage - f4.damage2;
+								
+								pg1.getWeaponDamage1();
+								pg1.getWeaponDamage2();
+
+								this.friendHealth = this.friendHealth - pg1.damage1 - pg1.damage2;
+								
+								System.out.println("        Friends Health:  " + this.friendHealth);
+								System.out.println("           Foes Health:  " + this.foeHealth);
+								break;
+							}
+						}
+						
+						
+						if (pa1.option == 3)	{
+						
+							if (pa1.choice2 == 1)	{	
+								
+								f5.getWeaponDamage();
+								f5.getWeaponDamage2();
+								f5.getWeaponDamage3();
+
+								this.foeHealth = this.foeHealth - f5.damage - f5.damage2 - f5.damage3;	
+								
+								pg1.getWeaponDamage1();
+								pg1.getWeaponDamage2();
+
+								this.friendHealth = this.friendHealth - pg1.damage1 - pg1.damage2;
+							
+								System.out.println("        Friends Health:  " + this.friendHealth);
+								System.out.println("           Foes Health:  " + this.foeHealth);
+								break;
+							}
+							if (pa1.choice2 == 2)	{
+								
+								f6.getWeaponDamage();
+								f6.getWeaponDamage2();
+								f6.getWeaponDamage3();
+							
+								this.foeHealth = this.foeHealth - f6.damage - f6.damage2 - f6.damage3;
+							
+								pg1.getWeaponDamage1();
+								pg1.getWeaponDamage2();
+
+								this.friendHealth = this.friendHealth - pg1.damage1 - pg1.damage2;
+								
+								System.out.println("        Friends Health:  " + this.friendHealth);
+								System.out.println("           Foes Health:  " + this.foeHealth);
+								break;
+							}
+						}						
+						break;
+					default:
+						System.out.println("You have fleed the fight");
+						System.out.println("You loose");
+						friendHealth = 0;
+						
+						break;
+					}
+		}
+		
+		if (this.friendHealth > this.foeHealth) {
+			System.out.println("Friend(s) have won");
+		}
+
+		if (this.friendHealth < this.foeHealth) {
+			System.out.println("Foe(s) have won");
+		}
+
+	}
+	
 }
