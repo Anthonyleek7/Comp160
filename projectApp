@@ -143,18 +143,6 @@ public class projectApp {
 			}
 
 			}
-			this.option = option;
-			this.style = style;
-			this.choice = choice;
-			this.choice2 = choice2;
 		}
-
 	}
-
-		
-	
-	
-
-	
 }
-
