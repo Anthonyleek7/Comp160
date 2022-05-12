@@ -18,6 +18,7 @@ public class randTroupe2 {
 	Random rand = new Random();
 	
 	public randTroupe2()	{
+	while (weaponName2 == null)	{
 		Scanner kbdIn = new Scanner(System.in);
 		
 		friends f1 = new friends();
@@ -26,6 +27,10 @@ public class randTroupe2 {
 		type = f1.FriendType[i];	
 		health = f1.FriendHealth[i];
 		int l = rand.nextInt(f1.numberOfFriends - 1);
+		if (i == l) {
+			System.out.println( "Please enter a valid input!" );
+			continue;
+		}
 		name2 = f1.Friends[l];
 		type2 = f1.FriendType[l];	
 		health2 = f1.FriendHealth[l];
@@ -37,6 +42,7 @@ public class randTroupe2 {
 		damage2 = fw1.FriendWeaponDamage[k];
 		weaponName2 = fw1.FriendWeaponName[k];
 	}
+	}
 	
 	public void displayRandTroupe2()	{
 		System.out.printf("Name: %5s%n", name);
@@ -44,11 +50,13 @@ public class randTroupe2 {
 		System.out.printf("Health: %5s%n", health);
 		System.out.printf("Weapon: %5s%n", weaponName);
 		System.out.printf("Weapon Damage: %5s%n", damage);
+		System.out.println();
 		System.out.printf("Name: %5s%n", name2);
 		System.out.printf("Class: %5s%n", type2);
 		System.out.printf("Health: %5s%n", health2);
 		System.out.printf("Weapon: %5s%n", weaponName2);
 		System.out.printf("Weapon Damage: %5s%n", damage2);
+		System.out.println();
 	}
 		
 }
