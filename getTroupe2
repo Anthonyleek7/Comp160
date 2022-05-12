@@ -3,20 +3,21 @@ package GroupProject;
 import java.util.Scanner;
 
 public class getTroupe2 {
-	public String name;
-	public String type;
-	public double health;
-	public double damage;
-	public String weaponName;
-	public String name2;
-	public String type2;
-	public double health2;
-	public double damage2;
-	public String weaponName2;
+	public static String name;
+	public static String type;
+	public static double health;
+	public static double damage;
+	public static String weaponName;
+	
+	public static String name2;
+	public static String type2;
+	public static double health2;
+	public static double damage2;
+	public static String weaponName2;
 
 
 	
-	public getTroupe2()	{
+	private static void getTroupe2()	{
 	while (weaponName2 == null)	{
 		Scanner kbdIn = new Scanner(System.in);
 		
@@ -64,6 +65,7 @@ public class getTroupe2 {
 	}
 	
 	public void displayGetTroupe2()	{
+		getTroupe2();
 		System.out.printf("Name: %5s%n", name);
 		System.out.printf("Class: %5s%n", type);
 		System.out.printf("Health: %5s%n", health);
@@ -76,6 +78,15 @@ public class getTroupe2 {
 		System.out.printf("Weapon: %5s%n", weaponName2);
 		System.out.printf("Weapon Damage: %5s%n", damage2);
 		System.out.println();
+	}
+	
+	public double getWeaponDamage()	{
+		System.out.println ("Damage : " + damage);
+		return damage;
+	}
+	public double getWeaponDamage2()	{
+		System.out.println ("Damage 2: " + damage2);
+		return damage2;
 	}
 		
 }
