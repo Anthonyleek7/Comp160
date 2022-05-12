@@ -1,13 +1,16 @@
 package GroupProject;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+
 import java.util.Scanner;
 /**
  * @author Briar, Ben, Anthony
  */
 public class projectApp {
+	public int option;
+	public int style;
+	public int choice;
+	public int choice2;
 	
-public void playGame() {
+	public void playGame() {
 
 			
 		Scanner kbdIN = new Scanner( System.in );
@@ -32,9 +35,10 @@ public void playGame() {
 			System.out.println( " 4.                         Flee!" );
 			System.out.println();
 			System.out.println( "Choose an option: ");
-			int option = kbdIN.nextInt();
+			this.option = kbdIN.nextInt();
 			
-			switch( option ) {
+			System.out.println(this.option);
+			switch( this.option ) {
 			case 1:
 				System.out.println( "You have chosen to fight alone.");
 				System.out.println();
@@ -44,20 +48,24 @@ public void playGame() {
 				System.out.println( " 2.   Random!" );
 				System.out.print ("Choose now");
 				System.out.println();
-				int style = kbdIN.nextInt();
-				switch ( style ) {
+				this.style = kbdIN.nextInt();
+				System.out.println(this.style);
+				switch ( this.style ) {
 					case 1: //pick your own weapon
 						System.out.println("You have chosen to input your own values");
 						System.out.println();
 						f1.displayFriends();
 						fw1.displayFriendWeapons();
-						gf1.inputFriend();
 						gf1.displayGetFriend();
 						rfo1.displayRandomFoe();
+						this.option = 1;
+						this.style = 1;
 						return;
 					case 2: 
 						rf1.displayRandomFriend();
 						rfo1.displayRandomFoe();
+						this.option = 1; 
+						this.style = 2;
 						return;
 					
 					}
@@ -70,8 +78,9 @@ public void playGame() {
 				System.out.println( "1. by choice" );
 				System.out.println( "2. by random" );
 				System.out.print ("Choose now");
-				int choice = kbdIN.nextInt();
-				switch ( choice ) {
+				this.choice = kbdIN.nextInt();
+				System.out.println(this.choice);
+				switch ( this.choice ) {
 					case 1:
 						System.out.println("You have chosen input");
 						f1.displayFriends();
@@ -80,6 +89,8 @@ public void playGame() {
 						getTroupe2 f3 = new getTroupe2();
 						f3.displayGetTroupe2();
 						pg1.displayGang();
+						this.option = 2; 
+						this.choice = 1;
 						return;
 					case 2:
 						System.out.println("You have chosen random");
@@ -87,6 +98,8 @@ public void playGame() {
 						randTroupe2 f4 = new randTroupe2();
 						f4.displayRandTroupe2();
 						pg1.displayGang();
+						this.option = 2; 
+						this.choice = 1;
 						return;
 				
 				}
@@ -98,9 +111,10 @@ public void playGame() {
 				System.out.println( "1. by choice" );
 				System.out.println( "2. by random" );
 				System.out.print ("Choose now");
-				int choice2 = kbdIN.nextInt();
+				this.choice2 = kbdIN.nextInt();
+				System.out.println(this.choice2);
 				
-				switch( choice2 ) {
+				switch( this.choice2 ) {
 				case 1:
 					System.out.println("Choose two friends to fight with");
 					f1.displayFriends();
@@ -109,6 +123,8 @@ public void playGame() {
 					f5.displayGetTroupe3();
 					System.out.println();
 					pg1.displayGang();
+					this.option = 3; 
+					this.choice2 = 1;
 					return;
 				case 2:
 					System.out.println("You have chosen two random friends");
@@ -116,6 +132,8 @@ public void playGame() {
 					randTroupe3 f6 = new randTroupe3();
 					f6.displayRandTroupe3();
 					pg1.displayGang();
+					this.option = 3; 
+					this.choice2 = 2;
 					return;
 				}
 			default: {
@@ -125,7 +143,10 @@ public void playGame() {
 			}
 
 			}
-		
+			this.option = option;
+			this.style = style;
+			this.choice = choice;
+			this.choice2 = choice2;
 		}
 
 	}
