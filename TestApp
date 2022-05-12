@@ -29,21 +29,21 @@ public class TestApp {
 //		pg1.displayGang();
 
 
-		getFriend f2 = new getFriend();
-		f2.displayGetFriend();
+//		getFriend f2 = new getFriend();
+//		f2.displayGetFriend();
 		
-		getTroupe2 f3 = new getTroupe2();
-		f3.displayGetTroupe2();
+//		getTroupe2 f3 = new getTroupe2();
+//		f3.displayGetTroupe2();
 		
-		getTroupe3 f5 = new getTroupe3();
-		f5.displayGetTroupe3();
+//		getTroupe3 f5 = new getTroupe3();
+//		f5.displayGetTroupe3();
 		
-		randTroupe2 f4 = new randTroupe2();
-		f4.displayRandTroupe2();
+//		randTroupe2 f4 = new randTroupe2();
+//		f4.displayRandTroupe2();
 		
-		randTroupe3 f6 = new randTroupe3();
-		f6.displayRandTroupe3();
-	}
+//		randTroupe3 f6 = new randTroupe3();
+//		f6.displayRandTroupe3();
+	
 	}
 }
 
