@@ -42,6 +42,7 @@ public void playGame() {
 				System.out.println();
 				System.out.println( " 1.   User Input!" );
 				System.out.println( " 2.   Random!" );
+				System.out.print ("Choose now");
 				System.out.println();
 				int style = kbdIN.nextInt();
 				switch ( style ) {
@@ -68,20 +69,25 @@ public void playGame() {
 				System.out.println();
 				System.out.println( "1. by choice" );
 				System.out.println( "2. by random" );
+				System.out.print ("Choose now");
 				int choice = kbdIN.nextInt();
 				switch ( choice ) {
 					case 1:
-						System.out.println( "Choose one friend to fight with" ); 
-						for( int i = 0; i<2; i++) {
-							// pull friends class
-							i++;
-						}
-						break;
-					case 2:
-						System.out.println("You have chosen a random friend");
+						System.out.println("You have chosen input");
+						f1.displayFriends();
+						fw1.displayFriendWeapons();
 						System.out.println();
-						// pulls one random friend and two foes to fight
-						break;
+						getTroupe2 f3 = new getTroupe2();
+						f3.displayGetTroupe2();
+						pg1.displayGang();
+						return;
+					case 2:
+						System.out.println("You have chosen random");
+						System.out.println();
+						randTroupe2 f4 = new randTroupe2();
+						f4.displayRandTroupe2();
+						pg1.displayGang();
+						return;
 				
 				}
 						
@@ -91,20 +97,25 @@ public void playGame() {
 				System.out.println();
 				System.out.println( "1. by choice" );
 				System.out.println( "2. by random" );
+				System.out.print ("Choose now");
 				int choice2 = kbdIN.nextInt();
 				
 				switch( choice2 ) {
 				case 1:
 					System.out.println("Choose two friends to fight with");
-					for( int i = 0; i<3; i++) {
-						// pull friends class
-						i++;
-					}
-					break;
+					f1.displayFriends();
+					fw1.displayFriendWeapons();
+					getTroupe3 f5 = new getTroupe3();
+					f5.displayGetTroupe3();
+					System.out.println();
+					pg1.displayGang();
+					return;
 				case 2:
 					System.out.println("You have chosen two random friends");
 					System.out.println();
-					// pulls two random friends and three foes to fight
+					randTroupe3 f6 = new randTroupe3();
+					f6.displayRandTroupe3();
+					pg1.displayGang();
 					return;
 				}
 			default: {
