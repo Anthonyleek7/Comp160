@@ -2,49 +2,44 @@ package GroupProject;
 
 import java.util.Scanner;
 
-public class getFriend {
-	public String name;
-	public String type;
-	public double health;
-	public double damage;
-	public String weaponName;
-	
-
-
-	
-	public getFriend()	{
-		Scanner kbdIn = new Scanner(System.in);
+	public class getFriend {
+		public String name;
+		public String type;
+		public double health;
+		public double damage;
+		public String weaponName;
 		
-		friends f1 = new friends();
-		System.out.print( "Enter your pick for friend: ");
-		int i = kbdIn.nextInt() -1;
-		if ((i < 1) ||( i > f1.numberOfFriends)) {
-			System.out.println( "Please enter a valid input!" );
-			return;
+
+
+		
+		public void inputFriend()	{
+			Scanner kbdIn = new Scanner(System.in);
+			
+			friends f1 = new friends();
+			System.out.print( "Enter your pick for friend: ");
+			int i = kbdIn.nextInt() -1;
+
+			name = f1.Friends[i];
+			type = f1.FriendType[i];	
+			health = f1.FriendHealth[i];
+			friendWeapons fw1 = new friendWeapons();
+			System.out.print( "Enter your pick for friend's weapons: ");
+			int j = kbdIn.nextInt() -1;
+			
+			
+
+			damage = fw1.FriendWeaponDamage[j];
+			
+			weaponName = fw1.FriendWeaponName[j];
 		}
 		
-		name = f1.Friends[i];
-		type = f1.FriendType[i];	
-		health = f1.FriendHealth[i];
-		friendWeapons fw1 = new friendWeapons();
-		System.out.print( "Enter your pick for friend's weapons: ");
-		int j = kbdIn.nextInt() -1;
-		if ((j < 1) ||( j > fw1.numberOfFriendWeapons)) {
-			System.out.println( "Please enter a valid input!" );
-			return;
+		public void displayGetFriend()	{
+			System.out.printf("Name: %5s%n", name);
+			System.out.printf("Class: %5s%n", type);
+			System.out.printf("Health: %5s%n", health);
+			System.out.printf("Weapon: %5s%n", weaponName);
+			System.out.printf("Weapon Damage: %5s%n", damage);
 		}
-
-		damage = fw1.FriendWeaponDamage[j];
-		
-		weaponName = fw1.FriendWeaponName[j];
-	}
-	
-	public void displayGetFriend()	{
-		System.out.printf("Name: %5s%n", name);
-		System.out.printf("Class: %5s%n", type);
-		System.out.printf("Health: %5s%n", health);
-		System.out.printf("Weapon: %5s%n", weaponName);
-		System.out.printf("Weapon Damage: %5s%n", damage);
-	}
+			
 		
 }
