@@ -4,45 +4,49 @@ import java.util.Random;
 
 public class randomFoes {
 	
-	String name;
-	String type;
-	double health;
-	double damage;
-	String weaponName;
+	public static String name;
+	public static String type;
+	public static double health;
+	public static double damage;
+	public static String weaponName;
 	
-	public randomFoes() {
+	private static void getrandomFoes() {
 	
-	Random rand = new Random();
+		Random rand = new Random();
 
-	Foe f1 = new Foe();
+		Foe f1 = new Foe();
 	
-	int i = rand.nextInt(f1.numberOfFoes - 1);
+		int i = rand.nextInt(f1.numberOfFoes);
 	
-	name = f1.Foe[i];
+		name = f1.Foe[i];
 	
-	type = f1.FoeType[i];
+		type = f1.FoeType[i];
 	
-	health = f1.FoeHealth[i];
+		health = f1.FoeHealth[i];
 	
-	foeWeapons fw1 = new foeWeapons();
+		foeWeapons fw1 = new foeWeapons();
 	
-	int j = rand.nextInt(fw1.numberOfFoeWeapons - 1);
+		int j = rand.nextInt(fw1.numberOfFoeWeapons);
 	
-	damage = fw1.FoeWeaponDamage[j];
+		damage = fw1.FoeWeaponDamage[j];
 	
-	weaponName = fw1.FoeWeaponName[j];
+		weaponName = fw1.FoeWeaponName[j];
 	
 	}
 	
 	public void displayRandomFoe()	{
+		getrandomFoes(); 
 		System.out.printf("Name: %5s%n", name);
 		System.out.printf("Class: %5s%n", type);
 		System.out.printf("Health: %5s%n", health);
 		System.out.printf("Weapon: %5s%n", weaponName);
 		System.out.printf("Weapon Damage: %5s%n", damage);
+	}
+	
+	public double getWeaponDamage()	{
 		
+		System.out.println ("Damage: " + damage);
+		return damage;
 	}
 	
 }
-
-
