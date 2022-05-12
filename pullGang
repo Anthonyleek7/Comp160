@@ -4,19 +4,19 @@ import java.util.Random;
 
 public class pullGang {
 	
-	public String name1;
-	public String type1;
-	public double health1;
-	public double damage1;
-	public String weaponName1;
+	public static String name1;
+	public static String type1;
+	public static double health1;
+	public static double damage1;
+	public static String weaponName1;
 	
-	public String name2;
-	public String type2;
-	public double health2;
-	public double damage2;
-	public String weaponName2;
+	public static String name2;
+	public static String type2;
+	public static double health2;
+	public static double damage2;
+	public static String weaponName2;
 	
-	public pullGang() {
+	private static void pullGang() {
 	
 	Random rand = new Random();
 
@@ -50,7 +50,8 @@ public class pullGang {
 	
 	}
 	
-	public void displayGang()	{
+	public  void displayGang()	{
+		pullGang();
 		System.out.printf("Name 1: %5s%n", name1);
 		System.out.printf("Class 1: %5s%n", type1);
 		System.out.printf("Health 1: %5s%n", health1);
@@ -63,6 +64,15 @@ public class pullGang {
 		System.out.printf("Weapon 2: %5s%n", weaponName2);
 		System.out.printf("Weapon Damage 2: %5s%n", damage2);
 		
+	}
+	
+	public double getWeaponDamage1()	{
+		System.out.println ("Damage 1: " + damage1);
+		return damage1;
+	}
+	public double getWeaponDamage2()	{
+		System.out.println ("Damage 2: " + damage2);
+		return damage2;
 	}
 	
 }
