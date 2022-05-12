@@ -1,0 +1,54 @@
+package GroupProject;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class randTroupe2 {
+	public String name;
+	public String type;
+	public double health;
+	public double damage;
+	public String weaponName;
+	public String name2;
+	public String type2;
+	public double health2;
+	public double damage2;
+	public String weaponName2;
+
+	Random rand = new Random();
+	
+	public randTroupe2()	{
+		Scanner kbdIn = new Scanner(System.in);
+		
+		friends f1 = new friends();
+		int i = rand.nextInt(f1.numberOfFriends - 1);
+		name = f1.Friends[i];
+		type = f1.FriendType[i];	
+		health = f1.FriendHealth[i];
+		int l = rand.nextInt(f1.numberOfFriends - 1);
+		name2 = f1.Friends[l];
+		type2 = f1.FriendType[l];	
+		health2 = f1.FriendHealth[l];
+		friendWeapons fw1 = new friendWeapons();
+		int j = rand.nextInt(fw1.numberOfFriendWeapons - 1);
+		damage = fw1.FriendWeaponDamage[j];
+		weaponName = fw1.FriendWeaponName[j];
+		int k = rand.nextInt(fw1.numberOfFriendWeapons - 1);
+		damage2 = fw1.FriendWeaponDamage[k];
+		weaponName2 = fw1.FriendWeaponName[k];
+	}
+	
+	public void displayRandTroupe2()	{
+		System.out.printf("Name: %5s%n", name);
+		System.out.printf("Class: %5s%n", type);
+		System.out.printf("Health: %5s%n", health);
+		System.out.printf("Weapon: %5s%n", weaponName);
+		System.out.printf("Weapon Damage: %5s%n", damage);
+		System.out.printf("Name: %5s%n", name2);
+		System.out.printf("Class: %5s%n", type2);
+		System.out.printf("Health: %5s%n", health2);
+		System.out.printf("Weapon: %5s%n", weaponName2);
+		System.out.printf("Weapon Damage: %5s%n", damage2);
+	}
+		
+}
