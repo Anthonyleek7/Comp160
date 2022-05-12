@@ -1,13 +1,14 @@
 package GroupProject;
 
-import java.util.Scanner;
+import java.util.Random;
 
-public class getTroupe3 {
-	public static String name;
-	public static String type;
-	public static double health;
-	public static double damage;
-	public static String weaponName;
+public class pullGang {
+	
+	public static String name1;
+	public static String type1;
+	public static double health1;
+	public static double damage1;
+	public static String weaponName1;
 	
 	public static String name2;
 	public static String type2;
@@ -15,116 +16,63 @@ public class getTroupe3 {
 	public static double damage2;
 	public static String weaponName2;
 	
-	public static String name3;
-	public static String type3;
-	public static double health3;
-	public static double damage3;
-	public static String weaponName3;
-
+	private static void pullGang() {
 	
-	private static void getTroupe3()	{
-	while (weaponName2 == null)	{	
-		Scanner kbdIn = new Scanner(System.in);
-		
-		friends f1 = new friends();
-		friendWeapons fw1 = new friendWeapons();
-		System.out.print( "Enter your pick for friend 1: ");
-		int i = kbdIn.nextInt() -1;
-		if ((i < 0) ||( i > f1.numberOfFriends-1)) {
-			System.out.println( "Please enter a valid input!" );
-			continue;
-		}
-		name = f1.Friends[i];
-		type = f1.FriendType[i];	
-		health = f1.FriendHealth[i];
-		
-		System.out.print( "Enter your pick for friend 2: ");
-		int l = kbdIn.nextInt() -1;
-		if ((l < 0) ||( l > f1.numberOfFriends-1)||(i == l)) {
-			System.out.println( "Please enter a valid input!" );
-			continue;
-		}
-		name2 = f1.Friends[l];
-		type2 = f1.FriendType[l];	
-		health2 = f1.FriendHealth[l];
-		
-		System.out.print( "Enter your pick for friend 3: ");
-		int o = kbdIn.nextInt() -1;
-		if ((o < 0) ||(  o> f1.numberOfFriends-1)||(o == l)||(o == i)) {
-			System.out.println( "Please enter a valid input!" );
-			continue;
-		}
-		name3 = f1.Friends[o];
-		type3 = f1.FriendType[o];	
-		health3 = f1.FriendHealth[o];
+	Random rand = new Random();
+
+	Foe f1 = new Foe();
+
+	name1 = f1.Foe[1];
 	
-		
-		System.out.print( "Enter your pick for friend 1's weapon: ");
-		int j = kbdIn.nextInt() -1;
-		if ((j < 0) ||( j > fw1.numberOfFriendWeapons-1)) {
-			System.out.println( "Please enter a valid input!" );
-			continue;
-		}
-
-		damage = fw1.FriendWeaponDamage[j];
-		
-		weaponName = fw1.FriendWeaponName[j];
-		System.out.print( "Enter your pick for friend 2's weapon: ");
-		int k = kbdIn.nextInt() -1;
-		if ((k < 0) ||( k > fw1.numberOfFriendWeapons-1)) {
-			System.out.println( "Please enter a valid input!" );
-			continue;
-		}
-
-		damage2 = fw1.FriendWeaponDamage[k];
-		
-		weaponName2 = fw1.FriendWeaponName[k];
-		System.out.print( "Enter your pick for friend 3's weapon: ");
-		int g = kbdIn.nextInt() -1;
-		if ((g < 0) ||( g > fw1.numberOfFriendWeapons -1)) {
-			System.out.println( "Please enter a valid input!" );
-			continue;
-		}
-
-		damage3 = fw1.FriendWeaponDamage[g];
-		
-		weaponName3 = fw1.FriendWeaponName[g];
-	}
+	type1 = f1.FoeType[1];
+	
+	health1 = f1.FoeHealth[1];
+	
+	name2 = f1.Foe[0];
+	
+	type2 = f1.FoeType[0];
+	
+	health2 = f1.FoeHealth[0];
+	
+	foeWeapons fw1 = new foeWeapons();
+	
+	int j = rand.nextInt(fw1.numberOfFoeWeapons - 1);
+	
+	damage1 = fw1.FoeWeaponDamage[j];
+	
+	weaponName1 = fw1.FoeWeaponName[j];
+	
+	int k = rand.nextInt(fw1.numberOfFoeWeapons - 1);
+	
+	damage2 = fw1.FoeWeaponDamage[k];
+	
+	weaponName2 = fw1.FoeWeaponName[k];
+	
 	}
 	
-	public void displayGetTroupe3()	{
-		getTroupe3();
-		System.out.printf("Name 1: %5s%n", name);
-		System.out.printf("Class 1: %5s%n", type);
-		System.out.printf("Health 1: %5s%n", health);
-		System.out.printf("Weapon 1: %5s%n", weaponName);
-		System.out.printf("Weapon Damage 1: %5s%n", damage);
+	public  void displayGang()	{
+		pullGang();
+		System.out.printf("Name 1: %5s%n", name1);
+		System.out.printf("Class 1: %5s%n", type1);
+		System.out.printf("Health 1: %5s%n", health1);
+		System.out.printf("Weapon 1: %5s%n", weaponName1);
+		System.out.printf("Weapon Damage 1: %5s%n", damage1);
 		System.out.println();
 		System.out.printf("Name 2: %5s%n", name2);
 		System.out.printf("Class 2: %5s%n", type2);
 		System.out.printf("Health 2: %5s%n", health2);
 		System.out.printf("Weapon 2: %5s%n", weaponName2);
 		System.out.printf("Weapon Damage 2: %5s%n", damage2);
-		System.out.println();
-		System.out.printf("Name 3: %5s%n", name3);
-		System.out.printf("Class 3: %5s%n", type3);
-		System.out.printf("Health 3: %5s%n", health3);
-		System.out.printf("Weapon 3: %5s%n", weaponName3);
-		System.out.printf("Weapon Damage 3: %5s%n", damage3);
-	}
 		
-	public double getWeaponDamage()	{
-		System.out.println ("Damage : " + damage);
-		return damage;
+	}
+	
+	public double getWeaponDamage1()	{
+		System.out.println ("Damage 1: " + damage1);
+		return damage1;
 	}
 	public double getWeaponDamage2()	{
 		System.out.println ("Damage 2: " + damage2);
 		return damage2;
 	}
-	public double getWeaponDamage3()	{
-		System.out.println ("Damage 3: " + damage3);
-		return damage3;
-	}
-	
 	
 }
