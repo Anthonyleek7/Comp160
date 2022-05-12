@@ -63,10 +63,8 @@ public class fight {
 			
 			switch (fight)	{
 					case 1:
-						if (pa1.option == 1)	{
-							
-							if (pa1.style == 1)	{
-								gf1.getWeaponDamage();
+						gf1.getWeaponDamage();
+							if (gf1.damage > 0)	{
 								this.foeHealth = this.foeHealth - gf1.damage;
 								
 								rfo1.getWeaponDamage();
@@ -76,9 +74,10 @@ public class fight {
 								System.out.println("           Foes Health:  " + this.foeHealth);
 								break;
 							}
-							if (pa1.style == 2)	{
+							
+							rf1.getWeaponDamage();
+							if (rf1.damage > 0)	{
 								
-								rf1.getWeaponDamage();
 								this.foeHealth = this.foeHealth - rf1.damage;
 								rfo1.getWeaponDamage();
 								this.friendHealth = this.friendHealth - rfo1.damage;
@@ -87,9 +86,7 @@ public class fight {
 								System.out.println("           Foes Health:  " + this.foeHealth);
 								break;
 							}
-						}
-						if (pa1.option == 2)	{
-							 
+													 
 							if (pa1.choice == 1)	{	
 								
 								f3.getWeaponDamage();
@@ -122,11 +119,9 @@ public class fight {
 								System.out.println("           Foes Health:  " + this.foeHealth);
 								break;
 							}
-						}
 						
 						
-						if (pa1.option == 3)	{
-						
+											
 							if (pa1.choice2 == 1)	{	
 								
 								f5.getWeaponDamage();
@@ -161,7 +156,7 @@ public class fight {
 								System.out.println("           Foes Health:  " + this.foeHealth);
 								break;
 							}
-						}						
+												
 						break;
 					default:
 						System.out.println("You have fleed the fight");
@@ -169,8 +164,9 @@ public class fight {
 						friendHealth = 0;
 						
 						break;
-					}
+			}
 		}
+		
 		
 		if (this.friendHealth > this.foeHealth) {
 			System.out.println("Friend(s) have won");
