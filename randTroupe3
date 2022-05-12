@@ -4,54 +4,59 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class randTroupe3 {
-	public String name;
-	public String type;
-	public double health;
-	public double damage;
-	public String weaponName;
-	public String name2;
-	public String type2;
-	public double health2;
-	public double damage2;
-	public String weaponName2;
-	public String name3;
-	public String type3;
-	public double health3;
-	public double damage3;
-	public String weaponName3;
-	Random rand = new Random();
+	public static String name;
+	public static String type;
+	public static double health;
+	public static double damage;
+	public static String weaponName;
 	
-	public randTroupe3()	{
+	public static String name2;
+	public static String type2;
+	public static double health2;
+	public static double damage2;
+	public static String weaponName2;
+	
+	public static String name3;
+	public static String type3;
+	public static double health3;
+	public static double damage3;
+	public static String weaponName3;
+	
+	
+	private static void randTroupe3()	{
+		Random rand = new Random();
+
 	while (weaponName3 == null)	{
 		Scanner kbdIn = new Scanner(System.in);
 		
 		friends f1 = new friends();
-		int i = rand.nextInt(f1.numberOfFriends - 1);
+		int i = rand.nextInt(f1.numberOfFriends);
 		name = f1.Friends[i];
 		type = f1.FriendType[i];	
 		health = f1.FriendHealth[i];
-		int l = rand.nextInt(f1.numberOfFriends - 1);
+		int l = rand.nextInt(f1.numberOfFriends);
 		name2 = f1.Friends[l];
 		type2 = f1.FriendType[l];	
 		health2 = f1.FriendHealth[l];
-		int f = rand.nextInt(f1.numberOfFriends - 1);
+		int f = rand.nextInt(f1.numberOfFriends);
 		name3 = f1.Friends[f];
 		type3 = f1.FriendType[f];	
 		health3 = f1.FriendHealth[f];
 		friendWeapons fw1 = new friendWeapons();
-		int j = rand.nextInt(fw1.numberOfFriendWeapons - 1);
+		int j = rand.nextInt(fw1.numberOfFriendWeapons);
 		damage = fw1.FriendWeaponDamage[j];
 		weaponName = fw1.FriendWeaponName[j];
-		int k = rand.nextInt(fw1.numberOfFriendWeapons - 1);
+		int k = rand.nextInt(fw1.numberOfFriendWeapons);
 		damage2 = fw1.FriendWeaponDamage[k];
 		weaponName2 = fw1.FriendWeaponName[k];
-		int m = rand.nextInt(fw1.numberOfFriendWeapons - 1);
+		int m = rand.nextInt(fw1.numberOfFriendWeapons);
 		damage3 = fw1.FriendWeaponDamage[m];
 		weaponName3 = fw1.FriendWeaponName[m];
 	}
 	}
 	
 	public void displayRandTroupe3()	{
+		randTroupe3();
 		System.out.printf("Name: %5s%n", name);
 		System.out.printf("Class: %5s%n", type);
 		System.out.printf("Health: %5s%n", health);
@@ -71,6 +76,18 @@ public class randTroupe3 {
 		System.out.printf("Weapon Damage: %5s%n", damage3);
 		System.out.println();
 	}
-		
+	
+	public double getWeaponDamage()	{
+		System.out.println ("Damage : " + damage);
+		return damage;
+	}
+	public double getWeaponDamage2()	{
+		System.out.println ("Damage 2: " + damage2);
+		return damage2;
+	}
+	public double getWeaponDamage3()	{
+		System.out.println ("Damage 3: " + damage3);
+		return damage3;
+	}
+	
 }
-
