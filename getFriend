@@ -9,9 +9,6 @@ import java.util.Scanner;
 		public double damage;
 		public String weaponName;
 		
-
-
-		
 		public void inputFriend()	{
 			Scanner kbdIn = new Scanner(System.in);
 			
