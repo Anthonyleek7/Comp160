@@ -4,19 +4,19 @@ import java.util.Random;
 
 public class randomFriend {
 	
-	String name;
-	String type;
-	double health;
-	double damage;
-	String weaponName;
+	public static String name;
+	public static String type;
+	public static double health;
+	public static double damage;
+	public static String weaponName;
 	
-	public randomFriend() {
+	public static void getrandomFriend() {
 	
 	Random rand = new Random();
 
 	friends f1 = new friends();
 	
-	int i = rand.nextInt(f1.numberOfFriends - 1);
+	int i = rand.nextInt(f1.numberOfFriends);
 	
 	name = f1.Friends[i];
 	
@@ -26,7 +26,7 @@ public class randomFriend {
 	
 	friendWeapons fw1 = new friendWeapons();
 	
-	int j = rand.nextInt(fw1.numberOfFriendWeapons - 1);
+	int j = rand.nextInt(fw1.numberOfFriendWeapons);
 	
 	damage = fw1.FriendWeaponDamage[j];
 	
@@ -35,12 +35,19 @@ public class randomFriend {
 	}
 	
 	public void displayRandomFriend()	{
+		getrandomFriend();
 		System.out.printf("Name: %5s%n", name);
 		System.out.printf("Class: %5s%n", type);
 		System.out.printf("Health: %5s%n", health);
 		System.out.printf("Weapon: %5s%n", weaponName);
 		System.out.printf("Weapon Damage: %5s%n", damage);
+		System.out.println();
 		
+	}
+	
+	public double getWeaponDamage()	{
+		System.out.println ("Damage: " + damage);
+		return damage;
 	}
 	
 }
