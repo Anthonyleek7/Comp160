@@ -3,24 +3,26 @@ package GroupProject;
 import java.util.Scanner;
 
 public class getTroupe3 {
-	public String name;
-	public String type;
-	public double health;
-	public double damage;
-	public String weaponName;
-	public String name2;
-	public String type2;
-	public double health2;
-	public double damage2;
-	public String weaponName2;
-	public String name3;
-	public String type3;
-	public double health3;
-	public double damage3;
-	public String weaponName3;
+	public static String name;
+	public static String type;
+	public static double health;
+	public static double damage;
+	public static String weaponName;
+	
+	public static String name2;
+	public static String type2;
+	public static double health2;
+	public static double damage2;
+	public static String weaponName2;
+	
+	public static String name3;
+	public static String type3;
+	public static double health3;
+	public static double damage3;
+	public static String weaponName3;
 
 	
-	public getTroupe3()	{
+	private static void getTroupe3()	{
 	while (weaponName2 == null)	{	
 		Scanner kbdIn = new Scanner(System.in);
 		
@@ -91,6 +93,7 @@ public class getTroupe3 {
 	}
 	
 	public void displayGetTroupe3()	{
+		getTroupe3();
 		System.out.printf("Name 1: %5s%n", name);
 		System.out.printf("Class 1: %5s%n", type);
 		System.out.printf("Health 1: %5s%n", health);
@@ -110,4 +113,18 @@ public class getTroupe3 {
 		System.out.printf("Weapon Damage 3: %5s%n", damage3);
 	}
 		
+	public double getWeaponDamage()	{
+		System.out.println ("Damage : " + damage);
+		return damage;
+	}
+	public double getWeaponDamage2()	{
+		System.out.println ("Damage 2: " + damage2);
+		return damage2;
+	}
+	public double getWeaponDamage3()	{
+		System.out.println ("Damage 3: " + damage3);
+		return damage3;
+	}
+	
+	
 }
