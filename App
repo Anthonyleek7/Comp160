@@ -3,8 +3,61 @@ package GroupProject;
 public class App {
 
 	public static void main(String[] args) {
+//		Lines 7-45 are used to test each class and its job
+//		
+//		Foe fo1 = new Foe();
+//		fo1.displayFoes();
+//		
+//		
+//		friends f1 = new friends();
+//		f1.displayFriends();
+//		
+//		friendWeapons fw1 = new friendWeapons();
+//		fw1.displayFriendWeapons();
+//		
+//		foeWeapons fow1 = new foeWeapons();
+//		fow1.displayFoeWeapons();
+//	
+//		
+//		randomFriend rf1 = new randomFriend();
+//		rf1.displayRandomFriend();
+//		
+//		randomFoes rf2 = new randomFoes();
+//		rf2.displayRandomFoe();
+//		
+//		pullGang pg1 = new pullGang();
+//		pg1.displayGang();
+//
+//
+//		getFriend f2 = new getFriend();
+//		f2.displayGetFriend();
+//		
+//		getTroupe2 f3 = new getTroupe2();
+//		f3.displayGetTroupe2();
+//		
+//		getTroupe3 f5 = new getTroupe3();
+//		f5.displayGetTroupe3();
+//		
+//		randTroupe2 f4 = new randTroupe2();
+//		f4.displayRandTroupe2();
+//		
+//		randTroupe3 f6 = new randTroupe3();
+//		f6.displayRandTroupe3();
+	
+//		f1.FriendHealth[1] = (f1.FriendHealth[1] - 90);
+//		System.out.println(f1.FriendHealth[1] + f1.numberOfFriends);
+		
+		
 //		pull from Fight class that is all
+		
+//		projectApp pa1 = new projectApp();
+//		pa1.playGame();
+		
+		fight f1 = new fight();
+		f1.runfight();
+		
 		
 		
 	}
+
 }
