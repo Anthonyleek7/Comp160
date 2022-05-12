@@ -17,14 +17,15 @@ public class getTroupe2 {
 
 	
 	public getTroupe2()	{
+	while (weaponName2 == null)	{
 		Scanner kbdIn = new Scanner(System.in);
 		
 		friends f1 = new friends();
 		System.out.print( "Enter your pick for friend 1: ");
 		int i = kbdIn.nextInt() -1;
-		if ((i < 1) ||( i > f1.numberOfFriends)) {
+		if ((i < 0) ||( i > f1.numberOfFriends -1)) {
 			System.out.println( "Please enter a valid input!" );
-			return;
+			continue;
 		}
 		name = f1.Friends[i];
 		type = f1.FriendType[i];	
@@ -32,9 +33,9 @@ public class getTroupe2 {
 		
 		System.out.print( "Enter your pick for friend 2: ");
 		int l = kbdIn.nextInt() -1;
-		if ((l < 1) ||( l > f1.numberOfFriends)) {
+		if ((l < 0) ||( l > f1.numberOfFriends -1 )|| (i == l)) {
 			System.out.println( "Please enter a valid input!" );
-			return;
+			continue;
 		}
 		name2 = f1.Friends[l];
 		type2 = f1.FriendType[l];	
@@ -42,9 +43,9 @@ public class getTroupe2 {
 		friendWeapons fw1 = new friendWeapons();
 		System.out.print( "Enter your pick for friend 1's weapon: ");
 		int j = kbdIn.nextInt() -1;
-		if ((j < 1) ||( j > fw1.numberOfFriendWeapons)) {
+		if ((j < 0) ||( j > fw1.numberOfFriendWeapons-1)) {
 			System.out.println( "Please enter a valid input!" );
-			return;
+			;
 		}
 
 		damage = fw1.FriendWeaponDamage[j];
@@ -54,11 +55,12 @@ public class getTroupe2 {
 		int k = kbdIn.nextInt() -1;
 		if ((k < 1) ||( k > fw1.numberOfFriendWeapons)) {
 			System.out.println( "Please enter a valid input!" );
-			return;
+			break;
 		}
 		damage2 = fw1.FriendWeaponDamage[k];
 		
 		weaponName2 = fw1.FriendWeaponName[k];
+	}
 	}
 	
 	public void displayGetTroupe2()	{
@@ -67,11 +69,13 @@ public class getTroupe2 {
 		System.out.printf("Health: %5s%n", health);
 		System.out.printf("Weapon: %5s%n", weaponName);
 		System.out.printf("Weapon Damage: %5s%n", damage);
+		System.out.println();
 		System.out.printf("Name: %5s%n", name2);
 		System.out.printf("Class: %5s%n", type2);
 		System.out.printf("Health: %5s%n", health2);
 		System.out.printf("Weapon: %5s%n", weaponName2);
 		System.out.printf("Weapon Damage: %5s%n", damage2);
+		System.out.println();
 	}
 		
 }
