@@ -2,14 +2,23 @@ package GroupProject;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
+/**
+ * @author Briar, Ben, Anthony
+ */
 public class projectApp {
-
+	
 public void playGame() {
 
 			
 		Scanner kbdIN = new Scanner( System.in );
-		Friend f1 = new Friend();
+		friends f1 = new friends();
+		Foe fo1 = new Foe();
+		friendWeapons fw1 = new friendWeapons();
+		foeWeapons fow1 = new foeWeapons();
+		getFriend gf1 = new getFriend();
+		randomFriend rf1 = new randomFriend();
+		randomFoes rfo1 = new randomFoes();
+		pullGang pg1 = new pullGang();
 				
 		
 		while( true ) {
@@ -17,10 +26,10 @@ public void playGame() {
 			System.out.println( "Decide how your fight will go down!");
 			System.out.println( "Options" );
 			System.out.println();
-			System.out.println( " 1.               Fight alone!" );
-			System.out.println( " 2.   Fight in a group of two!" );
-			System.out.println( " 3. Fight in a group of three!" );
-			System.out.println( " 4.                      Flee!" );
+			System.out.println( " 1.                  Fight alone!" );
+			System.out.println( " 2.     Fight in a troupe of two!" );
+			System.out.println( " 3.   Fight in a troupe of three!" );
+			System.out.println( " 4.                         Flee!" );
 			System.out.println();
 			System.out.println( "Choose an option: ");
 			int option = kbdIN.nextInt();
@@ -39,12 +48,16 @@ public void playGame() {
 					case 1: //pick your own weapon
 						System.out.println("You have chosen to input your own values");
 						System.out.println();
-						System.out.println( "Choose your weapon: ");
-						int weapon = kbdIN.nextInt(); // pulls files from friends weapons for you to pick
-						break;
-					default: 
-						//computer picks random weapon and random foe to fight
-						break;
+						f1.displayFriends();
+						fw1.displayFriendWeapons();
+						gf1.inputFriend();
+						gf1.displayGetFriend();
+						rfo1.displayRandomFoe();
+						return;
+					case 2: 
+						rf1.displayRandomFriend();
+						rfo1.displayRandomFoe();
+						return;
 					
 					}
 					
