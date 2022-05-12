@@ -58,7 +58,7 @@ public class friendWeapons {
 		System.out.println("FriendWeapons Table!!");
 		System.out.println("********************************");
 		System.out.printf ("%20s %11s %n", "Name","Damage");
-		System.out.println("-------------------");
+		System.out.println("--------------------------------");
 		for (int i = 0; i < this.numberOfFriendWeapons;i++)	{
 			
 			System.out.print("row "+ (i+1) + " | ");
